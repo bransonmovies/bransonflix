@@ -1,4 +1,99 @@
-background: #292929;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BransonFlix</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080808;
+  color: white;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #e50914;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.hero {
+  min-height: 420px;
+  padding: 70px 25px;
+  background: linear-gradient(90deg, #080808 20%, transparent),
+              linear-gradient(0deg, #080808 5%, transparent);
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 500px;
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 22px;
+  background: #e50914;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+section {
+  padding: 25px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px;
+}
+
+.movie {
+  background: #171717;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.poster {
+  height: 210px;
+  background: #292929;
   border-radius: 6px;
   display: flex;
   align-items: center;
