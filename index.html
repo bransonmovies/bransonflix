@@ -3,115 +3,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BransonFlix</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #080808;
-  color: white;
+body{
+  font-family:Arial,sans-serif;
+  background:#070712;
+  color:white;
 }
 
-header {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 7%;
+  background:rgba(8,8,20,.95);
+  border-bottom:1px solid #25254a;
 }
 
-.logo {
-  font-size: 26px;
-  font-weight: bold;
+.logo{
+  font-size:27px;
+  font-weight:900;
+  color:white;
 }
 
-.logo span {
-  color: #e50914;
+.logo span{
+  color:#ff1744;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 15px;
+nav a{
+  color:#ddd;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
 }
 
-.hero {
-  min-height: 420px;
-  padding: 70px 25px;
-  background: linear-gradient(90deg, #080808 20%, transparent),
-              linear-gradient(0deg, #080808 5%, transparent);
+nav a:hover{
+  color:#ff1744;
 }
 
-.hero h1 {
-  font-size: 50px;
-  margin-bottom: 15px;
+.hero{
+  min-height:520px;
+  padding:100px 7%;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 80% 30%,#4b00ff55,transparent 35%),
+    radial-gradient(circle at 20% 70%,#ff174455,transparent 30%),
+    linear-gradient(135deg,#080816,#12051d);
 }
 
-.hero p {
-  max-width: 500px;
-  color: #ccc;
-  font-size: 18px;
-  line-height: 1.5;
+.hero-content{
+  max-width:650px;
 }
 
-.button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 13px 22px;
-  background: #e50914;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+.badge{
+  display:inline-block;
+  background:#ff1744;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:20px;
 }
 
-section {
-  padding: 25px;
+.hero h1{
+  font-size:clamp(45px,7vw,82px);
+  line-height:.95;
+  margin-bottom:22px;
 }
 
-section h2 {
-  margin-bottom: 20px;
+.hero h1 span{
+  color:#ff1744;
 }
 
-.movies {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 18px;
+.hero p{
+  color:#c9c9d8;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:30px;
 }
 
-.movie {
-  background: #171717;
-  padding: 15px;
-  border-radius: 8px;
+.btn{
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:8px;
+  background:linear-gradient(90deg,#ff1744,#8a2be2);
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  margin-right:10px;
+  box-shadow:0 8px 25px #ff174433;
 }
 
-.poster {
-  height: 210px;
-  background: #292929;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #aaa;
-  margin-bottom: 10px;
+.btn.secondary{
+  background:#20203a;
 }
 
-.movie h3 {
-  font-size: 16px;
+section{
+  padding:45px 7%;
 }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  margin-top: 30px;
-  background: #111;
-  color: #888;
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.section-title h2{
+  font-size:28px;
+}
+
+.section-title span{
+  color:#ff1744;
+}
+
+.movies{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:20px;
+}
+
+.movie{
+  background:#111123;
+  border:1px solid #242448;
+  border-radius:12px;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.movie:hover{
+  transform:translateY(-7px);
+  border-color:#ff1744;
+}
+
+.poster{
+  height:250px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:15px;
+  font-weight:bold;
+  background:
+    linear-gradient(145deg,#24104a,#ff174455),
+    #17172b;
+}
+
+.movie-info{
+  padding:15px;
+}
+
+.movie-info h3{
+  margin-bottom:7px;
+}
+
+.movie-info p{
+  color:#9292a8;
+  font-size:13px;
+}
+
+.search{
+  margin:20px 7%;
+  padding:15px 18px;
+  width:86%;
+  border-radius:8px;
+  border:1px solid #303052;
+  background:#111123;
+  color:white;
+  font-size:16px;
+}
+
+.premium{
+  margin:20px 7%;
+  padding:45px;
+  border-radius:18px;
+  text-align:center;
+  background:
+    radial-gradient(circle,#701cff55,transparent 50%),
+    linear-gradient(135deg,#17102b,#100b20);
+  border:1px solid #4c2a80;
+}
+
+.premium h2{
+  font-size:34px;
+  margin-bottom:12px;
+}
+
+.premium p{
+  color:#bbb;
+  margin-bottom:20px;
+}
+
+footer{
+  text-align:center;
+  padding:35px;
+  color:#777;
+  background:#05050c;
+  margin-top:30px;
+}
+
+@media(max-width:600px){
+  header{
+    padding:15px 5%;
+  }
+
+  nav a{
+    margin-left:8px;
+    font-size:13px;
+  }
+
+  .hero{
+    padding:80px 5%;
+  }
+
+  section{
+    padding:35px 5%;
+  }
+
+  .search{
+    margin:20px 5%;
+    width:90%;
+  }
+
+  .premium{
+    margin:20px 5%;
+    padding:30px 20px;
+  }
 }
 </style>
 </head>
@@ -128,51 +257,91 @@ footer {
   </nav>
 </header>
 
-<div class="hero">
-  <h1>Welcome to BransonFlix</h1>
-  <p>
-    Discover movies and entertainment in one simple place.
-    Browse our collection and find something you love.
-  </p>
+<section class="hero">
 
-  <a class="button" href="#movies">Browse Movies</a>
-</div>
+  <div class="hero-content">
+
+    <div class="badge">🎬 WELCOME TO BRANSONFLIX</div>
+
+    <h1>Movies.<br><span>Anytime.</span><br>Anywhere.</h1>
+
+    <p>
+      Discover movies, entertainment and exciting stories
+      all in one place.
+    </p>
+
+    <a class="btn" href="#movies">▶ Browse Movies</a>
+    <a class="btn secondary" href="#premium">⭐ Premium</a>
+
+  </div>
+
+</section>
+
+<input class="search" type="text" placeholder="🔎 Search movies...">
 
 <section id="movies">
-  <h2>🎬 Featured Movies</h2>
+
+  <div class="section-title">
+    <h2>🔥 Featured <span>Movies</span></h2>
+    <span>View All →</span>
+  </div>
 
   <div class="movies">
 
     <div class="movie">
-      <div class="poster">MOVIE POSTER</div>
-      <h3>Movie One</h3>
+      <div class="poster">MOVIE<br>POSTER</div>
+      <div class="movie-info">
+        <h3>Movie One</h3>
+        <p>Action • 2026</p>
+      </div>
     </div>
 
     <div class="movie">
-      <div class="poster">MOVIE POSTER</div>
-      <h3>Movie Two</h3>
+      <div class="poster">MOVIE<br>POSTER</div>
+      <div class="movie-info">
+        <h3>Movie Two</h3>
+        <p>Drama • 2026</p>
+      </div>
     </div>
 
     <div class="movie">
-      <div class="poster">MOVIE POSTER</div>
-      <h3>Movie Three</h3>
+      <div class="poster">MOVIE<br>POSTER</div>
+      <div class="movie-info">
+        <h3>Movie Three</h3>
+        <p>Adventure • 2026</p>
+      </div>
     </div>
 
     <div class="movie">
-      <div class="poster">MOVIE POSTER</div>
-      <h3>Movie Four</h3>
+      <div class="poster">MOVIE<br>POSTER</div>
+      <div class="movie-info">
+        <h3>Movie Four</h3>
+        <p>Comedy • 2026</p>
+      </div>
     </div>
 
   </div>
+
 </section>
 
 <section id="premium">
-  <h2>⭐ Premium</h2>
-  <p>Premium content will be available here later.</p>
+
+  <div class="premium">
+
+    <h2>⭐ BransonFlix Premium</h2>
+
+    <p>
+      Premium content and extra features will be available here.
+    </p>
+
+    <a class="btn" href="#">Coming Soon</a>
+
+  </div>
+
 </section>
 
 <footer>
-  © 2026 BransonFlix — All rights reserved.
+  © 2026 BransonFlix • Entertainment Platform
 </footer>
 
 </body>
