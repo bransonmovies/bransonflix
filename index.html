@@ -1,10 +1,84 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>BransonFlix</title>
+background: #292929;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.movie h3 {
+  font-size: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  margin-top: 30px;
+  background: #111;
+  color: #888;
+}
+</style>
 </head>
+
 <body>
-  <h1>🎬 Welcome to BransonFlix</h1>
-  <p>Movies, shows and entertainment.</p>
+
+<header>
+  <div class="logo">Branson<span>Flix</span></div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#movies">Movies</a>
+    <a href="#premium">Premium</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Welcome to BransonFlix</h1>
+  <p>
+    Discover movies and entertainment in one simple place.
+    Browse our collection and find something you love.
+  </p>
+
+  <a class="button" href="#movies">Browse Movies</a>
+</div>
+
+<section id="movies">
+  <h2>🎬 Featured Movies</h2>
+
+  <div class="movies">
+
+    <div class="movie">
+      <div class="poster">MOVIE POSTER</div>
+      <h3>Movie One</h3>
+    </div>
+
+    <div class="movie">
+      <div class="poster">MOVIE POSTER</div>
+      <h3>Movie Two</h3>
+    </div>
+
+    <div class="movie">
+      <div class="poster">MOVIE POSTER</div>
+      <h3>Movie Three</h3>
+    </div>
+
+    <div class="movie">
+      <div class="poster">MOVIE POSTER</div>
+      <h3>Movie Four</h3>
+    </div>
+
+  </div>
+</section>
+
+<section id="premium">
+  <h2>⭐ Premium</h2>
+  <p>Premium content will be available here later.</p>
+</section>
+
+<footer>
+  © 2026 BransonFlix — All rights reserved.
+</footer>
+
 </body>
 </html>
